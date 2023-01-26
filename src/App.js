@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import MockGoals from './MockGoals';
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import AddGoals from './components/AddGoals/AddGoals';
+import Goals from './components/Goals/Goals';
+
 import './App.css';
 
+
 function App() {
+
+  const [goalsArray, insertArray] = useState(MockGoals);
+
+  function addGoalHandler(goal){
+    console.log(goal);
+    insertArray((prev) => [...prev,goal]);
+  }
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <AddGoals addGoal={addGoalHandler} />
+      <Goals goals={goalsArray} />
+      <Footer />
     </div>
   );
 }
