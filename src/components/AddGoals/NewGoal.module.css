@@ -1,0 +1,45 @@
+.form{
+    background-color: darkgreen;
+    width: 50%;
+    padding: 20px;
+    border: solid black 5px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.box{
+    margin: 20px;
+    text-align: left;
+}
+
+.label{
+    font-weight: bold;
+    margin: auto 5px;
+}
+
+.label1{
+    margin-right: 70px;
+}
+
+.input{
+    background-color: rgb(185, 193, 193);
+    width: 70%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn{
+    margin-top: 10px;
+    width: 80px;
+    background-color: blue;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    cursor: pointer;
+}

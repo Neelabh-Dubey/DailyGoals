@@ -14,15 +14,19 @@ function App() {
   const [goalsArray, insertArray] = useState(MockGoals);
 
   function addGoalHandler(goal){
-    console.log(goal);
+    goal.key = Math.round(Math.random()*1000);
     insertArray((prev) => [...prev,goal]);
+  }
+
+  function deleteGoalHandler(key){
+    insertArray(prev => prev.filter(item => item.key!== Number(key)));
   }
     
   return (
     <div className="App">
       <Header />
       <AddGoals addGoal={addGoalHandler} />
-      <Goals goals={goalsArray} />
+      <Goals goals={goalsArray} deleteGoal={deleteGoalHandler}/>
       <Footer />
     </div>
   );

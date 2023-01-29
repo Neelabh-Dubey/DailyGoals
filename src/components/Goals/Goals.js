@@ -3,10 +3,9 @@ import Goal from "./Goal";
 
 
 function Goals(props){
-
     return(
         <div>
-            {props.goals.map((goal) => <Goal goal={goal} key={Math.round(Math.random()*1000)} />)}
+            {props.goals.map((goal) => <Goal goal={goal} key={goal.key} onClick={props.deleteGoal}/>)}
         </div>
     )
 

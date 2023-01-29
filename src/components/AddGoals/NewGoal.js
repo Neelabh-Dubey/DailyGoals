@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import classes from './NewGoal.module.css';
 
 
 
@@ -26,16 +27,18 @@ function NewGoal(props){
     }
 
     return (
-        <form onSubmit={onSubmitHandler}>
-            <div>
-                <label>Title:</label>
-                <input type='text' onChange={titleHandler}></input>
-                <label>Description:</label>
-                <input type='text' onChange={descriptionHandler}></input>
+        <form onSubmit={onSubmitHandler} className={classes.form}>
+            <div className={classes.box}>
+                <label className={`${classes.label} ${classes.label1}`}>Title:</label>
+                <input type='text' onChange={titleHandler} className={classes.input}></input>
             </div>
-            <div>
-                <button type='button' onClick={onCancelHandler}>Cancel</button>
-                <button type='submit'>Add</button>
+            <div className={classes.box}>
+                <label className={classes.label}>Description:</label>
+                <input type='text' onChange={descriptionHandler} className={classes.input}></input>
+            </div>
+            <div className={`${classes.box} ${classes.buttons}`}>
+                <button type='button' onClick={onCancelHandler} className={classes.btn}>Cancel</button>
+                <button type='submit' className={classes.btn}>Add</button>
             </div>
         </form>
     )

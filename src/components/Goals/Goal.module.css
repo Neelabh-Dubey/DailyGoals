@@ -1,0 +1,14 @@
+.goal{
+    background-color: palevioletred;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.goal:hover{
+    cursor: pointer;
+}
